@@ -205,17 +205,22 @@ section{padding:120px 0;position:relative}
 /* about - kicker + rule */
 .abkick{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);margin-bottom:20px}
 .abkick .kdot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok)}
-.abrule{display:flex;align-items:center;gap:18px;margin:0 0 42px}
-.abrule span{font-size:18px;color:var(--ink);line-height:1}
-.abrule::after{content:"";height:1px;flex:1;max-width:380px;background:linear-gradient(90deg,var(--line-strong),transparent)}
+.abhead{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin:0 0 16px}
+.abhead-l{flex:0 0 auto;min-width:0}
+.abhead-l .lead-h{max-width:none}
+.abhead-r{flex:1 1 360px;min-width:0;max-width:440px}
+.abhead-r.jclickcue{margin:0 0 4px;text-align:left}
+.abrule{display:flex;align-items:center;gap:18px;margin:2px 0 30px}
+.abrule span{font-size:18px;color:var(--accent);line-height:1;flex:0 0 auto}
+.abrule::after{content:"";height:1px;flex:1;max-width:none;background:linear-gradient(90deg,var(--line-strong),var(--line))}
 .about{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:start}
 .portrait{position:relative;aspect-ratio:3/4;border:1px solid var(--line-strong);background:var(--surface);overflow:hidden;will-change:transform}
-.about .portrait{aspect-ratio:1/1.18;border-radius:22px}
+.about .portrait{aspect-ratio:1/1.26;border-radius:22px}
 .portrait img{width:100%;height:100%;object-fit:cover}
 .portrait .ph{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--serif);font-weight:900;font-size:90px;color:var(--muted);opacity:.35}
-.about .intro{font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);line-height:1.4;font-weight:500;margin:0}
+.about .intro{font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);line-height:1.4;font-weight:500;margin:0;text-wrap:balance}
 .about .intro em{font-style:italic;color:var(--accent)}
-.about .introsub{color:var(--muted);font-size:16px;line-height:1.7;margin:18px 0 0;max-width:52ch}
+.about .introsub{color:var(--muted);font-size:16px;line-height:1.7;margin:18px 0 0;max-width:50ch;text-wrap:pretty}
 .about .introsub em{font-style:italic;color:var(--accent);font-weight:500}
 /* about - process row */
 .process{display:flex;align-items:flex-start;gap:8px;margin-top:40px}
@@ -248,7 +253,7 @@ section{padding:120px 0;position:relative}
 .abtab.on{background:var(--accent);border-color:var(--accent);color:#fff}
 .abcard-body{margin:0;font-size:15.5px;line-height:1.62;color:var(--muted);min-height:4.7em}
 .abcard-body b{color:var(--ink);font-weight:600}
-@media(min-width:901px){.about .jcol{margin-top:-44px}}
+/* right column top-aligns with the intro; card aspect-ratio bottom-aligns the columns */
 
 /* marquee skills */
 .marquee{overflow:hidden;border-block:1px solid var(--line);padding:16px 0;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);margin-bottom:40px}
@@ -369,6 +374,7 @@ footer a{margin-left:16px}footer a:hover{color:var(--accent)}
 
 @media (max-width:900px){
   .works{grid-template-columns:1fr 1fr}.about,.corr{grid-template-columns:1fr;gap:34px}
+  .abhead{display:block}.abhead-r.jclickcue{max-width:none;margin:14px 0 0}
   .facts{grid-template-columns:1fr;grid-auto-flow:row}
   .fact:nth-child(-n+3){border-right:none}
   .fact:nth-child(3){border-bottom:1px solid var(--line)}
@@ -935,7 +941,7 @@ body.jopen{overflow:hidden}
 </section>
 
 <section id="work"><div class="wrap">
-  <h2 class="lead-h reveal">Problems I have <em>reframed</em> - from discovery to a shipped decision.</h2>
+  <h2 class="lead-h reveal" style="font-size:clamp(32px,5.4vw,62px)">Problems I've <em>reframed</em> - from discovery to a decision that shipped.</h2>
   <div class="viewtoggle reveal" id="viewToggle"><button class="vbtn on" data-view="revolve" data-cursor><span class="ink" id="icoRevolve"></span>Revolve</button><button class="vbtn" data-view="grid" data-cursor><span class="ink" id="icoGrid"></span>Grid</button></div>
   <div class="reelwrap reveal" id="reelwrap">
     <div class="reel" id="reel"></div>
@@ -944,12 +950,17 @@ body.jopen{overflow:hidden}
 </div></section>
 
 <section id="about"><div class="wrap">
-  <div class="abkick reveal"><span class="kdot"></span> More than a résumé</div>
-  <h2 class="lead-h reveal" style="margin:0 0 22px">More than a <em>résumé</em>.</h2>
+  <div class="abhead">
+    <div class="abhead-l">
+      <div class="abkick reveal"><span class="kdot"></span> More than a résumé</div>
+      <h2 class="lead-h reveal" style="margin:0">More than a <em>résumé</em>.</h2>
+    </div>
+    <div class="jclickcue abhead-r reveal"><span class="ink" id="icoClick"></span>Click below to begin the deep&#8209;dive. It&rsquo;s a quick, interactive market study on <b>recruiter pain</b>, the hiring noise, and the one signal that earns real trust. Yes, this research is genuinely about <b>you</b>.</div>
+  </div>
   <div class="abrule reveal"><span>&#10037;</span></div>
   <div class="about">
     <div class="reveal abtext">
-      <p class="intro">I'm a fourth-year student at IIIT Nagpur who got hooked on product the day I realised the hard part isn't building. It's figuring out <em>what's worth building</em>.</p>
+      <p class="intro">I'm a fourth-year student at IIIT Nagpur, hooked on product since I realised the hard part isn't building &mdash; it's figuring out <em>what's worth building</em>.</p>
       <p class="introsub">I like sitting with messy, half-formed problems until they click into a clear decision, and I learn fastest by <em>shipping the thing</em> and seeing what people actually do with it.</p>
       <div class="process reveal" id="process"></div>
       <div class="abcard reveal" id="abCard" data-cursor>
@@ -962,7 +973,7 @@ body.jopen{overflow:hidden}
         <p class="abcard-body" id="abCardBody"></p>
       </div>
     </div>
-    <div class="jcol reveal"><div class="jclickcue"><span class="ink" id="icoClick"></span>Click below to begin the deep&#8209;dive. It&rsquo;s a quick, interactive market study on <b>recruiter pain</b>, the hiring noise, and the one signal that earns real trust. Yes, this research is genuinely about <b>you</b>.</div><div class="portrait jentry" id="journeyCard" data-cursor><span class="je-glare" aria-hidden="true"></span><div class="je-inner"><div class="je-k">User research &middot; subject: <em>you</em></div><h3 class="je-h">Can <em>product thinking</em> solve hiring?</h3><p class="je-desc">An interactive deep&#8209;dive into recruiter pain, and the one signal that earns real confidence.</p><div class="je-sub">Interactive discovery journey &middot; ~3 min</div><div class="je-btn">Begin the deep dive <svg class="ink" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15M13 6l6 6-6 6"/></svg></div><div class="je-hint">Press Enter &crarr; to immerse</div></div><span class="ph" id="avatarHost" style="display:none"></span><img id="heroImg" alt="" style="display:none"></div><div class="jproto"><svg class="jproto-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.8 1.8 18.5a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9.2v4"/><path d="M12 17h.01"/></svg><span><b>Prototype</b> &middot; proceed with caution</span></div></div>
+    <div class="jcol reveal"><div class="portrait jentry" id="journeyCard" data-cursor><span class="je-glare" aria-hidden="true"></span><div class="je-inner"><div class="je-k">User research &middot; subject: <em>you</em></div><h3 class="je-h">Can <em>product thinking</em> solve hiring?</h3><p class="je-desc">An interactive deep&#8209;dive into recruiter pain, and the one signal that earns real confidence.</p><div class="je-sub">Interactive discovery journey &middot; ~3 min</div><div class="je-btn">Begin the deep dive <svg class="ink" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15M13 6l6 6-6 6"/></svg></div><div class="je-hint">Press Enter &crarr; to immerse</div></div><span class="ph" id="avatarHost" style="display:none"></span><img id="heroImg" alt="" style="display:none"></div><div class="jproto"><svg class="jproto-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.8 1.8 18.5a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/><path d="M12 9.2v4"/><path d="M12 17h.01"/></svg><span><b>Prototype</b> &middot; proceed with caution</span></div></div>
   </div>
   <div class="quip" id="quip" data-cursor><span class="ink" id="quipIco"></span><span id="quipText"></span><span class="shuf">tap to shuffle</span></div>
   <div class="facts" id="facts"></div>
@@ -1050,6 +1061,7 @@ const ICON={
   ratingstar:`<path ${P} d="m12 3.5 2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 9.2l5.4-.8L12 3.5Z"/>`,
   coastal:`<path ${P} d="M12 2.5a3.4 3.4 0 0 1 3.4 3.4c0 2.6-3.4 6-3.4 6s-3.4-3.4-3.4-6A3.4 3.4 0 0 1 12 2.5Z"/><circle ${P} cx="12" cy="5.9" r="1.1"/><path ${P} d="M3 16c1.8-1.8 3.6-1.8 5.4 0s3.6 1.8 5.4 0 3.6-1.8 5.4 0"/><path ${P} d="M3 20c1.8-1.8 3.6-1.8 5.4 0s3.6 1.8 5.4 0 3.6-1.8 5.4 0"/>`,
   fitness:`<circle ${P} cx="12" cy="5.5" r="2.4"/><path ${P} d="M12 8.5v6M12 10.5 8 12.5M12 10.5l4 2M9.5 20.5 12 14.5l2.5 6"/><path ${P} d="M18.5 6.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4L16.5 9l1.4-.6.6-1.4Z"/>`,
+  whatsapppay:`<path ${P} d="M5.5 4h13A1.5 1.5 0 0 1 20 5.5v7a1.5 1.5 0 0 1-1.5 1.5H9l-3.5 3.5 1-3.5H5.5A1.5 1.5 0 0 1 4 12.5v-7A1.5 1.5 0 0 1 5.5 4Z"/><path ${P} d="M9.8 7.2h4.4M9.8 9.4h4.4M10.6 7.2c2.5 0 2.5 2.2 0 2.2l3 3.1"/>`,
   /* skills */
   strategy:`<circle ${P} cx="12" cy="12" r="9"/><path ${P} d="m8 16 2.5-5.5L16 8l-2.5 5.5L8 16Z"/><circle ${P} cx="12" cy="12" r="1"/>`,
   chart:`<path ${P} d="M3.5 21h17"/><path ${P} d="M6 21V12M11 21V6M16 21v-6"/>`,
@@ -1138,6 +1150,15 @@ const DATA = {
       solution:"An adjudication engine that triangulates user tags against GPS and timestamp telemetry to route fault correctly.",
       impact:"Accurate blame attribution that protects restaurant trust - and a zero-CAC B2B lead loop into Hyperpure.",
       code:"",live:"https://zomato-s-flawed-review-system-case.vercel.app/"},
+    {id:"whatsapppay",label:"WhatsApp Pay",kind:"Growth Strategy",cat:["Strategy","Product"],role:"Solo case study",
+      sub:"The biggest reach, the smallest share",
+      overview:"Why does WhatsApp Pay struggle despite sitting on 500M+ users? I dug into the adoption gap, uncovered the friction points holding it back, and reframed the payment journey around discovery, trust and everyday usage.",
+      highlights:["Diagnosed a ~19,000× volume gap vs PhonePe despite WhatsApp's 500M+ user reach","Traced low adoption to a sequence of constraints: regulation, a P2P→P2M market shift, and missing merchant trust","Reframed Pay as a monetizable rail (ad-yield, not zero-MDR UPI) rather than a standalone payments app","Specced a wedge→habit→moat playbook: in-chat checkout, weekly P2M anchors, a 5th 'Pay' tab + camera, and contextual intent"],
+      stack:["Causal Diagnosis","Competitive Teardown","Unit Economics","North-Star (MAPP)","Flywheel Design"],metrics:[["500M+","reach, sub-1% share"],["19,000×","volume gap vs PhonePe"],["64%","of UPI is now P2M"]],
+      challenge:"WhatsApp held the largest distribution in Indian fintech - 500M+ users - yet processed under 1% of UPI volume. Why didn't that reach convert into adoption?",
+      solution:"Reframed Pay as the rail that makes every other layer more valuable: a Click-to-WhatsApp closed-loop checkout as the wedge, weekly P2M anchors for habit, and a 'Pay' tab plus contextual intent to make paying effortless.",
+      impact:"A self-reinforcing commerce flywheel - demand → conversion → monetization → reinvestment - with Monthly Active P2M Payers (MAPP) as the North Star and a path into merchant lending and credit.",
+      code:"",live:"https://whats-app-pay-case-study.vercel.app/"},
     {id:"coastal",label:"Coastal Eye",kind:"AI · Civic Tech",cat:["AI","Product"],role:"Product vision & build",
       sub:"Real-time ocean-hazard intelligence",
       overview:"A disaster-response platform connecting coastal communities with local response teams - closing safety gaps through real-time, coordinated crisis reporting and social-media intelligence.",
@@ -1263,7 +1284,7 @@ function attachTileFX(){if(touch)return;$$('.tile').forEach(t=>{if(t.__fx)return
     w.style.setProperty('--cx',(px*100)+'%');w.style.setProperty('--cy',(py*100)+'%');
     if(!reduced)w.style.transform=`rotateY(${(px-.5)*9}deg) rotateX(${-(py-.5)*9}deg)`});
   t.addEventListener('pointerleave',()=>{w.style.transform=''})})}
-const COVER_GRAD={zee:['#7B2FF7','#33106e'],groupcart:['#E23744','#8f1a23'],ratingstar:['#E23744','#6f141b'],coastal:['#1f8f8f','#0b3947'],fitness:['#FF7A18','#a8266a']};
+const COVER_GRAD={zee:['#7B2FF7','#33106e'],groupcart:['#E23744','#8f1a23'],ratingstar:['#E23744','#6f141b'],coastal:['#1f8f8f','#0b3947'],fitness:['#FF7A18','#a8266a'],whatsapppay:['#34C79A','#0b5e4a']};
 function coverSVG(p){const g=COVER_GRAD[p.id]||['#3B6EA5','#243a55'];
   return `<svg class="cv" viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice" style="color:#fff"><defs><linearGradient id="cg-${p.id}" x1="0" y1="0" x2="1.1" y2="1"><stop offset="0" stop-color="${g[0]}"/><stop offset="1" stop-color="${g[1]}"/></linearGradient></defs><rect width="400" height="160" fill="url(#cg-${p.id})"/><circle cx="48" cy="150" r="72" fill="#fff" opacity=".08"/><circle cx="356" cy="18" r="46" fill="#fff" opacity=".07"/><g transform="translate(262,40) scale(3.1)" stroke-width="1.5">${ICON[p.id]||''}</g></svg>`;}
 function drawWorks(){const list=DATA.projects, n=list.length;
