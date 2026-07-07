@@ -1119,6 +1119,7 @@ const ICON={
   coastal:`<path ${P} d="M12 2.5a3.4 3.4 0 0 1 3.4 3.4c0 2.6-3.4 6-3.4 6s-3.4-3.4-3.4-6A3.4 3.4 0 0 1 12 2.5Z"/><circle ${P} cx="12" cy="5.9" r="1.1"/><path ${P} d="M3 16c1.8-1.8 3.6-1.8 5.4 0s3.6 1.8 5.4 0 3.6-1.8 5.4 0"/><path ${P} d="M3 20c1.8-1.8 3.6-1.8 5.4 0s3.6 1.8 5.4 0 3.6-1.8 5.4 0"/>`,
   fitness:`<circle ${P} cx="12" cy="5.5" r="2.4"/><path ${P} d="M12 8.5v6M12 10.5 8 12.5M12 10.5l4 2M9.5 20.5 12 14.5l2.5 6"/><path ${P} d="M18.5 6.5l.6 1.4 1.4.6-1.4.6-.6 1.4-.6-1.4L16.5 9l1.4-.6.6-1.4Z"/>`,
   whatsapppay:`<path ${P} d="M5.5 4h13A1.5 1.5 0 0 1 20 5.5v7a1.5 1.5 0 0 1-1.5 1.5H9l-3.5 3.5 1-3.5H5.5A1.5 1.5 0 0 1 4 12.5v-7A1.5 1.5 0 0 1 5.5 4Z"/><path ${P} d="M9.8 7.2h4.4M9.8 9.4h4.4M10.6 7.2c2.5 0 2.5 2.2 0 2.2l3 3.1"/>`,
+  fampay:`<rect ${P} x="3" y="5" width="18" height="13" rx="2.5"/><path ${P} d="M7 10h3M7 13h5"/><circle ${P} cx="17" cy="11.5" r="2.5"/><path ${P} d="M16.2 11.5h1.6M17 10.7v1.6"/>`,
   /* skills */
   strategy:`<circle ${P} cx="12" cy="12" r="9"/><path ${P} d="m8 16 2.5-5.5L16 8l-2.5 5.5L8 16Z"/><circle ${P} cx="12" cy="12" r="1"/>`,
   chart:`<path ${P} d="M3.5 21h17"/><path ${P} d="M6 21V12M11 21V6M16 21v-6"/>`,
@@ -1188,6 +1189,15 @@ const DATA = {
       solution:"Reframed Pay as the rail that makes every other layer more valuable: a Click-to-WhatsApp closed-loop checkout as the wedge, weekly P2M anchors for habit, and a 'Pay' tab plus contextual intent to make paying effortless.",
       impact:"A self-reinforcing commerce flywheel - demand → conversion → monetization → reinvestment - with Monthly Active P2M Payers (MAPP) as the North Star and a path into merchant lending and credit.",
       code:"",live:"https://whats-app-pay-case-study.vercel.app/",summary:"https://summary-whats-app-pay.vercel.app/"},
+    {id:"fampay",label:"FamPay 18-Cliff",kind:"Product Strategy",cat:["Strategy","Product"],role:"Solo case study",
+      sub:"Turning a retention cliff into an origination funnel",
+      overview:"FamApp acquires users at 13 but structurally loses them at 18 when real banks issue adult cards. I diagnosed this regulatory-arbitrage expiry, traced defection across four competitor categories, and designed a four-part retention playbook that converts the birthday cliff into Indian fintech's largest origination funnel.",
+      highlights:["Diagnosed a built-in retention cliff rooted in regulatory arbitrage expiring at age 18","Mapped four-way user defection to neobanks, traditional banks, investing apps, and credit providers","Designed a Grown-Up account upgrade that converts teens in-place via delta-KYC, avoiding cold re-onboarding","Specced a four-solution sequence: Grown-Up account, privacy-first Independence mode, Credit at 18, and micro-investing"],
+      stack:["Retention Diagnosis","Regulatory Analysis","JTBD","Impact-Effort Matrix","RICE Prioritization"],metrics:[["15M+","users at risk of churning"],["5-10x","ARPU lift modeled"],["4","solutions sequenced"]],
+      challenge:"FamApp's moat is built on regulatory arbitrage: minors can't get bank-issued cards. At 18, that advantage vanishes overnight, creating a leaky bucket by design.",
+      solution:"Reframed the 18th birthday from a churn event into a graduation moment. A Grown-Up account upgrade with delta-KYC retains identity, coins, and history while unlocking adult limits, credit, and investing.",
+      impact:"A self-reinforcing lifecycle funnel that captures teens at 13, graduates them at 18, and monetizes through credit and investing, turning the biggest structural risk into the largest origination channel.",
+      code:"",live:"https://fam-app-casestudy-a589.vercel.app/",summary:""},
     {id:"groupcart",label:"Zomato Shared Cart",kind:"Product Design",cat:["Product"],role:"Solo case study",
       sub:"Reframing checkout as coordination cost",
       overview:"A collaborative ordering experience for groups - reframing the problem from checkout friction to coordination cost, backed by competitive teardown, persona research and a bottoms-up business case.",
@@ -1340,7 +1350,7 @@ function attachTileFX(){if(touch)return;$$('.tile').forEach(t=>{if(t.__fx)return
     w.style.setProperty('--cx',(px*100)+'%');w.style.setProperty('--cy',(py*100)+'%');
     if(!reduced)w.style.transform=`rotateY(${(px-.5)*9}deg) rotateX(${-(py-.5)*9}deg)`});
   t.addEventListener('pointerleave',()=>{w.style.transform=''})})}
-const COVER_GRAD={zee:['#7B2FF7','#33106e'],groupcart:['#E23744','#8f1a23'],ratingstar:['#E23744','#6f141b'],coastal:['#1f8f8f','#0b3947'],fitness:['#FF7A18','#a8266a'],whatsapppay:['#34C79A','#0b5e4a']};
+const COVER_GRAD={zee:['#7B2FF7','#33106e'],groupcart:['#E23744','#8f1a23'],ratingstar:['#E23744','#6f141b'],coastal:['#1f8f8f','#0b3947'],fitness:['#FF7A18','#a8266a'],whatsapppay:['#34C79A','#0b5e4a'],fampay:['#FFC107','#a8660a']};
 function coverSVG(p){const g=COVER_GRAD[p.id]||['#3B6EA5','#243a55'];
   return `<svg class="cv" viewBox="0 0 400 160" preserveAspectRatio="xMidYMid slice" style="color:#fff"><defs><linearGradient id="cg-${p.id}" x1="0" y1="0" x2="1.1" y2="1"><stop offset="0" stop-color="${g[0]}"/><stop offset="1" stop-color="${g[1]}"/></linearGradient></defs><rect width="400" height="160" fill="url(#cg-${p.id})"/><circle cx="48" cy="150" r="72" fill="#fff" opacity=".08"/><circle cx="356" cy="18" r="46" fill="#fff" opacity=".07"/><g transform="translate(262,40) scale(3.1)" stroke-width="1.5">${ICON[p.id]||''}</g></svg>`;}
 function drawWorks(){const list=DATA.projects, n=list.length;
