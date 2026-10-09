@@ -6,6 +6,7 @@
 <title>Prakhar Beniwal - Aspiring Product Manager</title>
 <meta name="description" content="Prakhar Beniwal - Aspiring Product Manager. PM Intern at Upstox, IIIT Nagpur, ex-CoinCodeCap. Product strategy, AI and growth - case studies on ZEE5, Zomato and more.">
 <meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%233B6EA5'/%3E%3Cpath d='M3.5 19V5h3.2a3.4 3.4 0 0 1 0 6.8H3.5M13 19V5h3.4a3.2 3.2 0 0 1 0 6.4H13M13 11.4h4a3.8 3.8 0 0 1 0 7.6H13' fill='none' stroke='%23fff' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="canonical" href="https://prakhar-portfolio-jrn1.vercel.app/">
 <!-- Open Graph (LinkedIn, WhatsApp, Facebook, Slack) -->
 <meta property="og:type" content="website">
@@ -294,14 +295,14 @@ section{padding:120px 0;position:relative}
 #reclist::after{content:"";position:absolute;left:152px;top:8px;width:2px;height:var(--rp,0px);transform:translateX(-50%);background:linear-gradient(180deg,color-mix(in srgb,var(--accent) 70%,transparent),color-mix(in srgb,var(--accent) 30%,transparent));border-radius:2px;z-index:1;pointer-events:none;transition:height .18s linear}
 .rec{position:relative;display:grid;grid-template-columns:132px 40px 1fr;align-items:start;padding:0}
 #reclist .rec{--c:var(--accent)}
-#reclist .rec:nth-child(1){--c:#3E9A5C}
+#reclist .rec:nth-child(1){--c:#6B34C7}
 #reclist .rec:nth-child(2){--c:#3B6EA5}
 #reclist .rec:nth-child(3){--c:#2E9E8B}
 #reclist .rec:nth-child(4){--c:#8466D6}
 #reclist .rec:nth-child(5){--c:#D98A3D}
 #reclist .rec:nth-child(6){--c:#D45D6A}
 #reclist .rec:nth-child(7){--c:#C45EA0}
-[data-theme="night"] #reclist .rec:nth-child(1){--c:#5CC27E}
+[data-theme="night"] #reclist .rec:nth-child(1){--c:#B38CFF}
 [data-theme="night"] #reclist .rec:nth-child(2){--c:#5B95D6}
 [data-theme="night"] #reclist .rec:nth-child(3){--c:#3FBFA9}
 [data-theme="night"] #reclist .rec:nth-child(4){--c:#A088F0}
@@ -332,6 +333,16 @@ section{padding:120px 0;position:relative}
 .rec-card li{position:relative;padding-left:22px;font-size:14.5px;line-height:1.62;color:var(--ink);opacity:.85}
 .rec-card li::before{content:"";position:absolute;left:2px;top:10px;width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:0 0 0 3px color-mix(in srgb,var(--c) 13%,transparent);transition:box-shadow .35s}
 .rec:hover .rec-card li::before{box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 20%,transparent)}
+#reclist .rec.feat .rec-card{background:linear-gradient(180deg,color-mix(in srgb,var(--c) 15%,var(--surface)),var(--surface) 72%) padding-box,linear-gradient(135deg,var(--c),color-mix(in srgb,var(--c) 22%,var(--line)) 55%,color-mix(in srgb,var(--c) 50%,transparent)) border-box;border:1.5px solid transparent;box-shadow:0 2px 6px rgba(20,24,30,.07),0 34px 64px -30px color-mix(in srgb,var(--c) 62%,rgba(20,24,30,.5))}
+#reclist .rec.feat:hover .rec-card{box-shadow:0 4px 10px rgba(20,24,30,.08),0 48px 80px -30px color-mix(in srgb,var(--c) 75%,rgba(20,24,30,.55))}
+#reclist .rec.feat .rec-card::before{width:5px}
+#reclist .rec.feat .rec-ico{background:var(--c);color:var(--surface);border-color:transparent;box-shadow:0 12px 24px -12px var(--c)}
+#reclist .rec.feat .rec-node{animation:recPulse 2.4s ease-in-out infinite}
+#reclist .rec.feat .rec-node::after{transform:scale(1)}
+@keyframes recPulse{50%{box-shadow:0 0 0 9px color-mix(in srgb,var(--c) 15%,transparent),0 0 22px color-mix(in srgb,var(--c) 72%,transparent)}}
+.rec-now{margin-left:auto;align-self:flex-start;display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:999px;font-family:var(--mono);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;color:var(--c);background:color-mix(in srgb,var(--c) 10%,var(--surface));border:1px solid color-mix(in srgb,var(--c) 32%,transparent)}
+.rec-now i{width:7px;height:7px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c);animation:pp 2s ease-in-out infinite}
+@media(max-width:560px){.rec-head{flex-wrap:wrap}.rec-meta{flex:1 1 160px}.rec-now{margin-left:0}}
 
 /* contact */
 .corr{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
@@ -464,7 +475,8 @@ footer a{margin-left:16px}footer a:hover{color:var(--accent)}
 @keyframes pp{50%{opacity:.35}}
 .cform .field input,.cform .field textarea{background:var(--surface)}
 .cleft .contacts{margin-top:28px}
-@media(max-width:760px){.contactpanel{grid-template-columns:1fr}.cleft{border-right:none;border-bottom:1px solid var(--line)}.cleft,.cform{padding:38px 30px;justify-content:flex-start}}
+@media(max-width:760px){.contactpanel{grid-template-columns:minmax(0,1fr)}.cleft{border-right:none;border-bottom:1px solid var(--line)}.cleft,.cform{padding:38px 30px;justify-content:flex-start}}
+@media(max-width:560px){.cleft,.cform{padding:32px 22px}.crow{gap:6px 12px;flex-wrap:wrap}.crow .k{width:auto}.crow .v{font-size:16px;min-width:0;overflow-wrap:anywhere}}
 /* footer torch */
 .footwrap{position:relative;border-top:2px solid var(--ink);padding:96px 0 64px;overflow:hidden;cursor:default}
 .fctn{position:relative;max-width:var(--maxw);margin:0 auto}
@@ -990,7 +1002,7 @@ body.jopen{overflow:hidden}
       <span class="mascot-shadow"></span>
       <div class="mascot-lean" id="mascotLean">
         <div class="mascot-float">
-          <img class="mascot-body" src="mascot_base.png" alt="Prakhar Beniwal animated avatar" draggable="false">
+          <img class="mascot-body" src="mascot_base.webp" alt="Prakhar Beniwal animated avatar" draggable="false">
           <span class="eye eye-l"><img class="iris" src="iris_0.png" alt="" draggable="false"><img class="lid" src="eyelid_0.png" alt="" draggable="false"></span>
           <span class="eye eye-r"><img class="iris" src="iris_1.png" alt="" draggable="false"><img class="lid" src="eyelid_1.png" alt="" draggable="false"></span>
         </div>
@@ -1054,7 +1066,7 @@ body.jopen{overflow:hidden}
   <div class="orbitwrap reveal">
     <div class="orbit-stage" id="orbitStage">
       <div class="orbit-core" id="orbitCore">
-        <div class="orbit-photoclip"><img class="orbit-photo" id="orbitPhoto" src="portrait.jpg" alt="Prakhar Beniwal" draggable="false"></div>
+        <div class="orbit-photoclip"><img class="orbit-photo" id="orbitPhoto" alt="Prakhar Beniwal" draggable="false"></div>
       </div>
     </div>
     <div class="orbit-copy reveal">
@@ -1062,7 +1074,7 @@ body.jopen{overflow:hidden}
       <h2 class="lead-h">Let's build something <em>meaningful</em>.</h2>
       <p class="orbit-lead">Recruiters, founders and fellow builders - I read and reply to every message, usually within a day. Tell me what you are working on.</p>
       <ul class="openlist">
-        <li>Product Internships</li><li>PM Roles</li><li>Collaborations</li><li>Case Study Discussions</li><li>Startup Conversations</li>
+        <li>APM Roles · 2027</li><li>Product Roles</li><li>Collaborations</li><li>Case Study Discussions</li><li>Startup Conversations</li>
       </ul>
       <div class="orbit-cta">
         <a class="btn fill mag" href="mailto:prakharbeniwal@gmail.com" data-cursor>Send an Email <svg class="ink" viewBox="0 0 24 24" aria-hidden="true"><path stroke="currentColor" stroke-width="1.7" fill="none" stroke-linecap="round" stroke-linejoin="round" d="M4 12h15M13 6l6 6-6 6"/></svg></a>
@@ -1094,7 +1106,7 @@ body.jopen{overflow:hidden}
   </div>
   <div class="fsolid">
     <div class="flinks" id="flinks"></div>
-    <div class="fmeta">Nagpur, India · © <span id="yr"></span> Prakhar Beniwal</div>
+    <div class="fmeta">Mumbai, India · © <span id="yr"></span> Prakhar Beniwal</div>
   </div>
   <div class="fhint">↑ move your cursor across the title</div>
 </footer>
@@ -1142,7 +1154,7 @@ const ICON={
   moon:`<path ${P} d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/>`,
   arrow:`<path ${P} d="M4 12h15M13 6l6 6-6 6"/>`,
   down:`<path ${P} d="M12 4v15M6 13l6 6 6-6"/>`,
-  mono:`<path ${P} d="M6 19V5h5a4 4 0 0 1 0 8H6M13 13l5 6"/>`,
+  mono:`<path ${P} d="M3.5 19V5h3.2a3.4 3.4 0 0 1 0 6.8H3.5M13 19V5h3.4a3.2 3.2 0 0 1 0 6.4H13M13 11.4h4a3.8 3.8 0 0 1 0 7.6H13"/>`,
   revolve:`<path ${P} d="M20.5 12a8.5 8.5 0 1 1-2.4-5.9"/><path ${P} d="M20.5 3.5V8h-4.5"/>`,
   grid:`<rect ${P} x="3.5" y="3.5" width="7" height="7" rx="1.2"/><rect ${P} x="13.5" y="3.5" width="7" height="7" rx="1.2"/><rect ${P} x="3.5" y="13.5" width="7" height="7" rx="1.2"/><rect ${P} x="13.5" y="13.5" width="7" height="7" rx="1.2"/>`,
   linkedin:`<rect ${P} x="3" y="3" width="18" height="18" rx="3"/><path ${P} d="M7 10.5v6.5"/><path ${P} d="M7 7.3h.01"/><path ${P} d="M11 17v-3.6a2.2 2.2 0 0 1 4.4 0V17"/><path ${P} d="M11 17v-6.5"/>`,
@@ -1155,9 +1167,9 @@ const DATA = {
   name:"Prakhar Beniwal", role:"Aspiring Product Manager · AI & Growth",
   photo:(window.PHOTO_DATA||"prakhar.jpeg"), resume:"Prakhar_Product_Resume.pdf",
   email:"prakharbeniwal@gmail.com", phone:"+91 96020 39349",
-  github:"https://github.com/mylink1", githubUser:"mylink1",
+  github:"https://github.com/PrakharBeniwal", githubUser:"PrakharBeniwal",
   linkedin:"https://www.linkedin.com/in/prakhar-beniwal-31b863216/",
-  facts:[["profile","Based","Nagpur, India"],["strategy","Focus","Product · AI · Growth"],["record","Education","IIIT Nagpur · Class of '27"],["chart","Internships","Upstox · CoinCodeCap · Ideal Fitness"],["ratingstar","Honors","5× 1st place"],["doc","Approach","Structure first, ship second"]],
+  facts:[["profile","Based","Mumbai, India"],["strategy","Focus","Product · AI · Growth"],["record","Education","IIIT Nagpur · Class of '27"],["chart","Internships","Upstox · CoinCodeCap · Ideal Fitness"],["ratingstar","Honors","5× 1st place"],["doc","Approach","Structure first, ship second"]],
   process:[["search","Research"],["strategy","Validate"],["skills","Build"],["chart","Impact"]],
   skillIcons:["strategy","chart","design","automation","code","people"],
   skills:[
@@ -1169,10 +1181,10 @@ const DATA = {
     {cat:"Collaboration",items:["Jira","Trello","Notion","Agile","Scrum","Stakeholder Comms"]}
   ],
   experience:[
-    {ic:"candles",st:"Jul 2026 - Now",ti:"Product Management Intern",or:"Upstox · Mumbai",
-     pts:["Mapped the end-to-end <b>US Stocks</b> user journey and designed its entire <b>Mixpanel</b> event taxonomy - defining the success metrics and what to track at every step.","Spotted a gap on the index details page by benchmarking competing brokers; wrote the <b>PRD</b> to surface ETFs there, shaped the flows with design and led the engineering handover.","Designed a first-time-user <b>activation widget</b> (handpicked stocks + smart lists) and planned an <b>A/B/C/D test</b> - 4 variants against control on an 8% activation baseline.","Built a <b>Claude skill</b> for every Upstox PM that turns a Figma design and a value proposition into &ldquo;What's New&rdquo; carousel copy, visuals and a hand-off doc - to lift feature adoption.","Diagnosed a create-to-order drop-off in <b>Screeners</b> on Mixpanel and wrote the Research Action Plan for the research team; also revamped in-app stock logos with a mapping script."]},
-    {ic:"chart",st:"May - Aug 2025",ti:"Product Analyst Intern",or:"CoinCodeCap · Remote",
-     pts:["Analyzed and reviewed emerging AI products - features, UX, pricing and target audiences - to surface strengths, gaps and improvement opportunities.","Ran feature-by-feature competitive benchmarks to map market positioning, differentiation and customer value.","Managed content workflows in <b>WordPress</b> + <b>Trello</b> across cross-functional teams."]},
+    {ic:"candles",st:"Jul 2026 - Now",ti:"Product Management Intern",or:"Upstox · Mumbai",ft:1,
+     pts:["<b>US Stocks analytics</b> - mapped the full user journey and designed its Mixpanel event taxonomy and success metrics.","<b>Discovery → delivery</b> - benchmarked brokers to spot an ETF gap on index pages; wrote the PRD and led the eng handover.","<b>Activation experiment</b> - designed a first-time-user widget and an A/B/C/D test: 4 variants vs control on an 8% baseline.","<b>AI for adoption</b> - built a Claude skill for every Upstox PM: Figma + value prop → &ldquo;What's New&rdquo; copy, visuals and hand-off.","<b>Funnel research</b> - diagnosed a create-to-order drop-off in Screeners and wrote its Research Action Plan."]},
+    {ic:"chart",st:"Nov&nbsp;2025 - Jan&nbsp;2026",ti:"Product Analysis & Comparison Intern",or:"CoinCodeCap · Remote",
+     pts:["Evaluated <b>15+ emerging AI products</b> - features, UX, pricing and target audiences - to surface strengths, gaps and improvement opportunities.","Ran feature-by-feature competitive benchmarks to map market positioning, differentiation and customer value.","Managed content workflows in <b>WordPress</b> + <b>Trello</b> across cross-functional teams."]},
     {ic:"automation",st:"Jun - Jul 2025",ti:"AI Automation Intern",or:"Ideal Fitness Centre · On-site",
      pts:["Built end-to-end AI automation pipelines in <b>n8n</b> integrating <b>Claude</b>, <b>ElevenLabs</b> and <b>HeyGen</b>.","Developed a scalable AI-avatar engine for script generation, voice synthesis and video creation - cutting manual effort through orchestration and prompt engineering."]},
     {ic:"people",st:"2025 - 2026",ti:"Artist Management Lead",or:"Abhivyakti · IIIT Nagpur",
@@ -1194,11 +1206,11 @@ const DATA = {
       solution:"Reframed Pay as the rail that makes every other layer more valuable: a Click-to-WhatsApp closed-loop checkout as the wedge, weekly P2M anchors for habit, and a 'Pay' tab plus contextual intent to make paying effortless.",
       impact:"A self-reinforcing commerce flywheel - demand → conversion → monetization → reinvestment - with Monthly Active P2M Payers (MAPP) as the North Star and a path into merchant lending and credit.",
       code:"",live:"https://whats-app-pay-case-study.vercel.app/",summary:"https://summary-whats-app-pay.vercel.app/"},
-    {id:"fampay",label:"FamPay 18-Cliff",kind:"Product Strategy",cat:["Strategy","Product"],role:"Solo case study",
+    {id:"fampay",label:"FamApp 18-Cliff",kind:"Product Strategy",cat:["Strategy","Product"],role:"Solo case study",
       sub:"Turning a retention cliff into an origination funnel",
       overview:"FamApp acquires users at 13 but structurally loses them at 18 when real banks issue adult cards. I diagnosed this regulatory-arbitrage expiry, traced defection across four competitor categories, and designed a four-part retention playbook that converts the birthday cliff into Indian fintech's largest origination funnel.",
       highlights:["Diagnosed a built-in retention cliff rooted in regulatory arbitrage expiring at age 18","Mapped four-way user defection to neobanks, traditional banks, investing apps, and credit providers","Designed a Grown-Up account upgrade that converts teens in-place via delta-KYC, avoiding cold re-onboarding","Specced a four-solution sequence: Grown-Up account, privacy-first Independence mode, Credit at 18, and micro-investing"],
-      stack:["Retention Diagnosis","Regulatory Analysis","JTBD","Impact-Effort Matrix","RICE Prioritization"],metrics:[["15M+","users at risk of churning"],["5-10x","ARPU lift modeled"],["4","solutions sequenced"]],
+      stack:["Retention Diagnosis","Regulatory Analysis","JTBD","Impact-Effort Matrix","RICE Prioritization"],metrics:[["15M+","users at risk of churning"],["5-30×","ARPU lift modeled"],["4","solutions sequenced"]],
       challenge:"FamApp's moat is built on regulatory arbitrage: minors can't get bank-issued cards. At 18, that advantage vanishes overnight, creating a leaky bucket by design.",
       solution:"Reframed the 18th birthday from a churn event into a graduation moment. A Grown-Up account upgrade with delta-KYC retains identity, coins, and history while unlocking adult limits, credit, and investing.",
       impact:"A self-reinforcing lifecycle funnel that captures teens at 13, graduates them at 18, and monetizes through credit and investing, turning the biggest structural risk into the largest origination channel.",
@@ -1238,7 +1250,7 @@ const DATA = {
       challenge:"Coastal hazards happen faster than official channels can react - and crowdsourced reports are noisy and untrusted.",
       solution:"Geo-tagged citizen reporting fused with AI credibility scoring and social-media signals into a live hotspot map.",
       impact:"Timely, coordinated crisis response that closes the gap between communities and local response teams.",
-      code:"https://github.com/mylink1/Coastal_Eye",live:""},
+      code:"https://github.com/PrakharBeniwal/Coastal_Eye",live:""},
     {id:"fitness",label:"AI Avatar Engine",kind:"AI Automation",cat:["AI"],role:"AI Automation Intern",
       sub:"Scaling fitness content with AI avatars",
       overview:"An end-to-end AI automation pipeline that generates scripts, synthesizes voice, and produces avatar videos - scaling marketing content while cutting manual effort.",
@@ -1256,7 +1268,7 @@ const CATS=["All","Strategy","Product","AI"];
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const projById=id=>DATA.projects.find(p=>p.id===id);
 const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches;
-const touch=matchMedia('(pointer:coarse)').matches;if(touch)document.body.classList.add('touch');
+const touch=matchMedia('(pointer:coarse)').matches;if(touch){document.body.classList.add('touch');const rh=document.getElementById('reelhint');if(rh)rh.innerHTML='Swipe to browse <span class="rharrow">&rarr;</span>';}
 
 /* fixed ui icons */
 $('#mono').innerHTML=icon('mono');$('#icoSearch').outerHTML=icon('search');$('#icoSearch2').outerHTML=icon('search');
@@ -1285,7 +1297,7 @@ $('#facts').innerHTML=DATA.facts.map(f=>`<div class="fact">${icon(f[0])}<span cl
 const skItems=DATA.skills.flatMap(s=>s.items);
 $('#mtrack').innerHTML=(skItems.concat(skItems)).map((s,i)=>`<span>${i%5===0?icon('skills'):''}${s}</span>`).join('');
 $('#skills').innerHTML=DATA.skills.map((s,i)=>`<div class="skl reveal"><div class="ct">${String(s.items.length).padStart(2,'0')}</div><div class="top">${icon(DATA.skillIcons[i]||'skills','draw')}<div class="cat">${s.cat}</div></div><div class="items">${s.items.map(x=>`<span>${x}</span>`).join('')}</div></div>`).join('');
-$('#reclist').innerHTML=DATA.experience.map((x,i)=>`<div class="rec reveal" style="--i:${i}"><div class="rec-when">${x.st}</div><div class="rec-rail"><span class="rec-node"></span></div><div class="rec-card"><div class="rec-head"><span class="rec-ico">${icon(x.ic,'draw')}</span><div class="rec-meta"><h4>${x.ti}</h4><div class="or">${x.or}</div></div></div><ul>${x.pts.map(p=>`<li>${p}</li>`).join('')}</ul></div></div>`).join('');
+$('#reclist').innerHTML=DATA.experience.map((x,i)=>`<div class="rec reveal${x.ft?' feat':''}" style="--i:${i}"><div class="rec-when">${x.st}</div><div class="rec-rail"><span class="rec-node"></span></div><div class="rec-card"><div class="rec-head"><span class="rec-ico">${icon(x.ic,'draw')}</span><div class="rec-meta"><h4>${x.ti}</h4><div class="or">${x.or}</div></div>${x.ft?'<span class="rec-now"><i></i>Current role</span>':''}</div><ul>${x.pts.map(p=>`<li>${p}</li>`).join('')}</ul></div></div>`).join('');
 const tel=DATA.phone.replace(/\s/g,'');
 $('#contacts').innerHTML=`
   <div class="crow" data-copy="${DATA.email}">${icon('contact')}<span class="k">Email</span><span class="v">${DATA.email}</span></div>
@@ -1298,7 +1310,7 @@ $('#contacts').addEventListener('click',e=>{const c=e.target.closest('[data-copy
 /* contact orbit */
 (function(){
   const stage=$('#orbitStage'),core=$('#orbitCore');if(!stage||!core)return;
-  const ph=$('#orbitPhoto');if(ph)ph.addEventListener('error',()=>{if(DATA.photo&&!ph.dataset.fb){ph.dataset.fb=1;ph.src=DATA.photo;}},{once:true});
+  const ph=$('#orbitPhoto');if(ph&&DATA.photo)ph.src=DATA.photo;
   const ORBIT=[
     {ic:'linkedin',label:'LinkedIn',href:DATA.linkedin,blank:1},
     {ic:'grid',label:'Check out my case studies',aria:'Case studies',href:'#work'},
@@ -1542,22 +1554,23 @@ function botLogo(){return '<svg class="botlogo" viewBox="0 0 100 100" aria-hidde
 $('#cbotFace').innerHTML=botLogo();$('#cheadFace').innerHTML=botLogo();
 
 /* ---- scripted assistant ---- */
-function botReply(text){const t=text.toLowerCase(),has=(...k)=>k.some(w=>t.includes(w));
-  const proj=DATA.projects.find(p=>t.includes(p.label.toLowerCase())||t.includes(p.id));
+function botReply(text){const t=text.toLowerCase(),has=(...k)=>k.some(w=>t.includes(w)),ws=t.match(/[a-z0-9]+/g)||[],is=(...k)=>k.some(w=>ws.includes(w));
+  const AKA={whatsapppay:['whatsapp'],fampay:['famapp','fam app'],groupcart:['shared cart','group order','group cart'],zee:['fifa'],ratingstar:['rating system','ratings','review system'],coastal:['coastal'],fitness:['avatar']};
+  const proj=DATA.projects.find(p=>[p.label.toLowerCase(),p.id].concat(AKA[p.id]||[]).some(w=>t.includes(w)));
   if(proj)return{html:`<b>${proj.label}</b> - ${proj.sub}. ${proj.impact}`,actions:[{label:'Open project',go:()=>openProject(proj.id)}].concat(proj.summary?[{label:'Summary',href:proj.summary}]:[]).concat(proj.live?[{label:'Deep dive',href:proj.live}]:(proj.code?[{label:'View source',href:proj.code}]:[]))};
-  if(has('hi','hello','hey','yo ','hii','namaste'))return{html:"Hi - I'm Prakhar's portfolio assistant. Ask about his case studies, product work, skills, experience, or how to reach him.",chips:['What does he do?','Show a case study','Is he available?']};
-  if(has('who','about','yourself','introduce'))return{html:"Prakhar is an aspiring <b>Product Manager</b> - currently a <b>PM Intern at Upstox</b>, studying at <b>IIIT Nagpur</b>, ex-<b>CoinCodeCap</b>. He builds at the intersection of product, AI and growth: reframing user problems, validating with research, and shipping decisions.",chips:['Show a case study','Is he available?']};
-  if(has('skill','stack','tech','tool','toolkit','strength','do'))return{html:"Across the board: <b>product strategy, discovery, analytics</b> and <b>RICE</b> prioritization; <b>SQL</b> + funnel/retention analysis; <b>Figma/Miro</b>; AI automation with <b>Claude, n8n, ElevenLabs, HeyGen</b>; and JS/Node/Python under the hood.",chips:['Show a case study','Is he available?']};
-  if(has('project','case','work','portfolio','made','shipped','study'))return{html:"He's built deep PM case studies. Favourites: <b>WhatsApp Pay</b> (growth-rail flywheel), <b>Zomato Shared Cart</b> (coordination-cost reframe), <b>ZEE5 × FIFA 2026</b> (streaming strategy post-mortem). Which one?",chips:["WhatsApp Pay","Zomato Shared Cart","ZEE5 × FIFA 2026","Zomato Rating System"]};
-  if(has('experience','intern','upstox','coincodecap','fitness','history','employ'))return{html:"Highlights: <b>PM Intern @ Upstox</b> (US Stocks analytics + Mixpanel taxonomy, an ETF discovery PRD, activation A/B tests and a Claude skill for the PM team), <b>Product Analysis Intern @ CoinCodeCap</b> (AI product teardowns + competitive benchmarking), <b>AI Automation Intern @ Ideal Fitness</b> (n8n + Claude + HeyGen avatar pipeline), and leadership across <b>Crescendo</b> &amp; <b>Abhivyakti</b>.",chips:['Is he available?']};
-  if(has('education','degree','college','study','iiit','ece','year'))return{html:"Fourth-year student at <b>IIIT Nagpur</b> (2023-2027)."};
-  if(has('achieve','award','win','honor','honour','prize','admads'))return{html:"Multiple 1st places - <b>AdMads '25 &amp; '26</b>, <b>Brand Experience '25</b>, <b>Street Play '24</b>; opened for <b>Harsh Gujral</b> live; <b>Under-25 Campus Leader, Zerodha</b>."};
-  if(has('contact','reach','hire','connect','available','availab','recruit','opportun','role','hiring','vacanc'))return{html:"He is <b>open to Product internships &amp; collaborations</b>. Use the form, or email <b>"+DATA.email+"</b>.",actions:[{label:'Go to contact',go:()=>{location.hash='#contact'}},{label:'Email',href:'mailto:'+DATA.email},{label:'Résumé',href:DATA.resume,dl:true}]};
+  if(has('contact','connect','availab','recruit','opportun','vacanc','hiring','open to','looking for')||is('reach','hire','job','jobs','apm','apms'))return{html:"He is <b>open to APM roles (2027 start)</b> &amp; collaborations. Use the form, or email <b>"+DATA.email+"</b>.",actions:[{label:'Go to contact',go:()=>{location.hash='#contact'}},{label:'Email',href:'mailto:'+DATA.email},{label:'Résumé',href:DATA.resume,dl:true}]};
+  if(has('experience','intern','upstox','coincodecap','employ','worked','history'))return{html:"Highlights: <b>PM Intern @ Upstox</b> (US Stocks analytics + Mixpanel taxonomy, an ETF discovery PRD, activation A/B tests and a Claude skill for the PM team), <b>Product Analysis &amp; Comparison Intern @ CoinCodeCap</b> (15+ AI product teardowns + competitive benchmarking), <b>AI Automation Intern @ Ideal Fitness</b> (n8n + Claude + HeyGen avatar pipeline), and leadership across <b>Crescendo</b> &amp; <b>Abhivyakti</b>.",chips:['Is he available?']};
+  if(has('education','degree','college','iiit','universit','graduat','btech','b.tech','studying','class of')||(is('study','ece')&&!has('case')))return{html:"Fourth-year <b>B.Tech, Electronics &amp; Communication</b> student at <b>IIIT Nagpur</b> (2023-2027)."};
+  if(has('achieve','award','honor','honour','prize','admads','competition')||is('win','won','wins','winner'))return{html:"Multiple 1st places - <b>AdMads '25 &amp; '26</b>, <b>Brand Experience '25</b>, <b>Street Play '24</b>; opened for <b>Harsh Gujral</b> live; <b>Under-25 Campus Leader, Zerodha</b>."};
   if(has('email','mail'))return{html:"Reach him at <b>"+DATA.email+"</b>.",actions:[{label:'Email',href:'mailto:'+DATA.email}]};
-  if(has('resume','cv'))return{html:"Here is his résumé.",actions:[{label:'Download résumé',href:DATA.resume,dl:true}]};
-  if(has('location','based','where','city','nagpur','relocat','remote'))return{html:"He is based in <b>Nagpur, India</b> - open to remote and relocation."};
-  if(has('fun','hobby','music','sing','stage','outside','life','interest'))return{html:"Off the clock: leading the music club, managing artists, and the occasional open-mic stage - 10+ live performances, an open-mic comedy win, and an opening slot for Harsh Gujral."};
-  if(has('thank','thanks','cool','nice','great','awesome','amazing'))return{html:"Anytime. Want his résumé or the contact form?",actions:[{label:'Contact',go:()=>{location.hash='#contact'}},{label:'Résumé',href:DATA.resume,dl:true}]};
+  if(has('resume','résumé')||is('cv'))return{html:"Here is his résumé.",actions:[{label:'Download résumé',href:DATA.resume,dl:true}]};
+  if(has('location','based','where','city','nagpur','mumbai','relocat','remote'))return{html:"He is based in <b>Mumbai, India</b> - open to remote and relocation."};
+  if(has('hobby','hobbies','music','comedy','outside work','interest')||is('fun','sing','singing','stage','life'))return{html:"Off the clock: leading the music club, managing artists, and the occasional open-mic stage - 10+ live performances, an open-mic comedy win, and an opening slot for Harsh Gujral."};
+  if(has('skill','stack','tech','tool','strength','sql','figma','mixpanel')||is('do'))return{html:"Across the board: <b>product strategy, discovery, analytics</b> and <b>RICE</b> prioritization; <b>SQL</b>, <b>Mixpanel</b> + funnel/retention analysis; <b>Figma/Miro</b>; AI automation with <b>Claude, n8n, ElevenLabs, HeyGen</b>; and JS/Node/Python under the hood.",chips:['Show a case study','Is he available?']};
+  if(has('project','case','portfolio','shipped','built')||is('work','made'))return{html:"He's built deep PM case studies. Favourites: <b>WhatsApp Pay</b> (growth-rail flywheel), <b>FamApp 18-Cliff</b> (churn cliff → origination funnel), <b>Zomato Shared Cart</b> (coordination-cost reframe), <b>ZEE5 × FIFA 2026</b> (streaming strategy post-mortem). Which one?",chips:["WhatsApp Pay","FamApp 18-Cliff","Zomato Shared Cart","ZEE5 × FIFA 2026","Zomato Rating System"]};
+  if(has('yourself','introduce')||is('who','about'))return{html:"Prakhar is an aspiring <b>Product Manager</b> - currently a <b>PM Intern at Upstox</b>, studying at <b>IIIT Nagpur</b>, ex-<b>CoinCodeCap</b>. He builds at the intersection of product, AI and growth: reframing user problems, validating with research, and shipping decisions.",chips:['Show a case study','Is he available?']};
+  if(is('hi','hii','hello','hey','yo','hiya','namaste','sup'))return{html:"Hi - I'm Prakhar's portfolio assistant. Ask about his case studies, product work, skills, experience, or how to reach him.",chips:['What does he do?','Show a case study','Is he available?']};
+  if(has('thank','awesome','amazing')||is('cool','nice','great'))return{html:"Anytime. Want his résumé or the contact form?",actions:[{label:'Contact',go:()=>{location.hash='#contact'}},{label:'Résumé',href:DATA.resume,dl:true}]};
   return{html:"I can talk about his <b>case studies, skills, experience, achievements or contact</b>. I'm a lightweight scripted assistant - try a chip below.",chips:['What does he do?','Show a case study','Is he available?']};}
 const cpanel=$('#cpanel'),cmsgs=$('#cmsgs'),cinp=$('#cInput');let chatStarted=false;
 function openChat(){cpanel.classList.add('on');if(!chatStarted){chatStarted=true;botSay("Hi - I'm Prakhar's portfolio assistant. Ask me anything about his work, or tap a suggestion.",['What does he do?','Show a case study','Is he available?'])}setTimeout(()=>cinp&&cinp.focus(),220)}
@@ -1750,7 +1763,7 @@ console.log('%cPrakhar Beniwal - product, built in code  ·  ⌘K','color:#3B6EA
         <ul class="jf-inc"><li>High ownership</li><li>Fast learning</li><li>Strong communication</li><li>Product thinking</li><li>Technical understanding</li><li>AI-native workflow</li><li>Leadership experience</li><li>Long-term upside</li></ul>
         <div class="jf-price">One fair stipend</div>
         <div class="jf-req">Requires: meaningful work &middot; great mentors &middot; room to grow.</div>
-        <div class="jf-avail"><span class="dot"></span> Currently open for Product internships</div>
+        <div class="jf-avail"><span class="dot"></span> Currently open to APM roles &middot; 2027</div>
         <a class="jf-book" id="jfBook" href="mailto:prakharbeniwal@gmail.com?subject=Interview%20request%20-%20Prakhar%20Beniwal">Book an interview &rarr;</a>
         <div class="jf-contacts">
           <a href="mailto:prakharbeniwal@gmail.com">Email</a>
@@ -1827,7 +1840,7 @@ console.log('%cPrakhar Beniwal - product, built in code  ·  ⌘K','color:#3B6EA
   const FEATS=[
     {n:'01',t:'Communication',e:'Stand-up comedy, public speaking, music performances, leadership presentations, cross-team coordination.',l:'Communicates clearly under pressure.'},
     {n:'02',t:'Leadership',e:'Artist Management Lead (Abhivyakti), Crescendo Lead, sponsor outreach, team & event execution.',l:'Led people - not just projects.'},
-    {n:'03',t:'Product Thinking',e:'Zomato case studies, ZEE × FIFA strategy, WhatsApp Pay, user research, discovery, growth.',l:'User-first, structured problem solving.'},
+    {n:'03',t:'Product Thinking',e:'Zomato case studies, ZEE × FIFA strategy, WhatsApp Pay, FamApp, user research, discovery, growth.',l:'User-first, structured problem solving.'},
     {n:'04',t:'Execution',e:'Upstox PM internship, CoinCodeCap, AI content systems, Ideal Fitness AI avatar, product research.',l:'Moves from idea to shipped.'},
     {n:'05',t:'Technical Fluency',e:'IIIT Nagpur, full-stack exposure, AI tools, automation systems.',l:"Speaks engineering's language."},
     {n:'06',t:'Learning Velocity',e:'Music, product, AI, content, technology, marketing, community building.',l:'Rapid adaptation across domains.'}
@@ -1842,14 +1855,16 @@ console.log('%cPrakhar Beniwal - product, built in code  ·  ⌘K','color:#3B6EA
 
   /* stage 6 planets */
   const PLANETS=[
-    {name:'ZEE5 × FIFA',world:'Product Strategy World',c:'#7B6CF6',x:'20%',y:'34%',sz:120,d:'7s',det:{Problem:'A flagship World Cup stream that leaked trust instead of driving acquisition.',Research:'Benchmarked three World Cup cycles and modeled a scenario-based P&L.',Insight:'Six cascading failures traced to one constraint: kickoff time-zones → RIO pricing trap → hard paywall.',Solution:'Contextual pricing tiers, a graceful-degradation spec, and a 48-hour crisis playbook.',Impact:'A 90-day-retention North Star and a 2026-CAC → 2030-LTV lifecycle thesis.',Learnings:'Surface failures are usually symptoms of one root constraint.'}},
-    {name:'WhatsApp Pay',world:'Growth & Adoption World',c:'#34C79A',x:'64%',y:'24%',sz:96,d:'8.5s',det:{Problem:'Case study in progress.',Research:'Coming soon.',Insight:'Coming soon.',Solution:'Coming soon.',Impact:'Coming soon.',Learnings:'Coming soon.'}},
-    {name:'Zomato Discovery',world:'Recommendation Systems World',c:'#F2607A',x:'78%',y:'58%',sz:110,d:'7.6s',det:{Problem:'In a three-sided marketplace, the rating system misroutes blame.',Research:'Mapped three misattribution modes and tore down six platforms.',Insight:'Telemetry contamination - the UI was decoupled without decoupling attribution.',Solution:'An adjudication engine triangulating user tags against GPS/timestamp telemetry.',Impact:'Accurate fault attribution plus a zero-CAC Hyperpure B2B lead loop.',Learnings:'Reframe the metric before you redesign the screen.'}},
-    {name:'Coastal Eye',world:'AI & Civic Tech World',c:'#3FB7E6',x:'34%',y:'66%',sz:104,d:'9s',det:{Problem:'Coastal hazards move faster than official channels can react.',Research:'Mapped the citizen-reporter journey; prioritized real-time alerts.',Insight:'Crowdsourced reports are noisy - trust is the real bottleneck.',Solution:'Geo-tagged reporting fused with AI credibility scoring and a live hotspot map.',Impact:'Timely, coordinated crisis response between communities and responders.',Learnings:"AI's job here is trust, not prediction."}},
-    {name:'Ideal Fitness',world:'AI Automation World',c:'#E8A24B',x:'50%',y:'46%',sz:92,d:'6.6s',det:{Problem:'Producing on-brand fitness content by hand does not scale.',Research:'Audited the content pipeline end to end.',Insight:'The bottleneck is orchestration, not creativity.',Solution:'An n8n pipeline chaining Claude → ElevenLabs → HeyGen from script to video.',Impact:'Automated avatar video from script to publish, multi-platform.',Learnings:'Automation compounds when you own the whole chain.'}}
+    {name:'ZEE5 × FIFA',world:'Product Strategy World',c:'#7B6CF6',x:'20%',y:'34%',mx:'6%',my:'27%',sz:120,d:'7s',det:{Problem:'A flagship World Cup stream that leaked trust instead of driving acquisition.',Research:'Benchmarked three World Cup cycles and modeled a scenario-based P&L.',Insight:'Six cascading failures traced to one constraint: kickoff time-zones → RIO pricing trap → hard paywall.',Solution:'Contextual pricing tiers, a graceful-degradation spec, and a 48-hour crisis playbook.',Impact:'A 90-day-retention North Star and a 2026-CAC → 2030-LTV lifecycle thesis.',Learnings:'Surface failures are usually symptoms of one root constraint.'}},
+    {name:'WhatsApp Pay',world:'Growth & Adoption World',c:'#34C79A',x:'64%',y:'24%',mx:'56%',my:'35%',sz:96,d:'8.5s',det:{Problem:'WhatsApp reaches 500M+ Indian users yet processes under 1% of UPI volume.',Research:'Sequenced a 3-cause failure analysis and benchmarked PhonePe&rsquo;s 46%-share playbook.',Insight:'Zero-MDR UPI means a ₹0 LTV - Pay has to be a monetizable rail, not a standalone payments app.',Solution:'A wedge → habit → moat roadmap: in-chat checkout, weekly P2M anchors, a Pay tab and contextual intent.',Impact:'A commerce flywheel with Monthly Active P2M Payers (MAPP) as the North Star.',Learnings:'Reach is not adoption - trust and habit have to be designed in.'}},
+    {name:'FamApp 18-Cliff',world:'Fintech Retention World',c:'#F5C542',x:'84%',y:'22%',mx:'6%',my:'44%',sz:100,d:'7.8s',det:{Problem:'FamApp&rsquo;s 15M teen users defect to banks, cards and investing apps the day they turn 18.',Research:'Traced defection across four competitor categories and the regulatory arbitrage that expires at 18.',Insight:'The 18th birthday is fintech&rsquo;s highest-intent upsell moment - a triangulated 5-30× ARPU step-change.',Solution:'A RICE-sequenced roadmap: Grown-Up account, Independence mode, Credit at 18 and micro-investing.',Impact:'30-day adult-product activation as the North Star - a churn cliff turned origination funnel.',Learnings:'The biggest structural risk can be the biggest growth channel.'}},
+    {name:'Zomato Shared Cart',world:'Group Commerce World',c:'#9ED36A',x:'8%',y:'62%',mx:'56%',my:'52%',sz:98,d:'8.2s',det:{Problem:'Group orders stall long before checkout - in the coordination that happens around it.',Research:'A 6-platform competitive teardown, anchor-persona research and a funnel diagnosis.',Insight:'The cost is coordination, not checkout - with a WhatsApp channel mismatch at the root.',Solution:'A shared-cart MVP scoped with RICE and impact-effort trade-offs.',Impact:'A bottoms-up GMV/AOV business case on FY25 data and a ≥60% cart-completion target.',Learnings:'Solve the coordination and the checkout takes care of itself.'}},
+    {name:'Zomato Rating System',world:'Marketplace Trust World',c:'#F2607A',x:'78%',y:'58%',mx:'6%',my:'61%',sz:110,d:'7.6s',det:{Problem:'In a three-sided marketplace, the rating system misroutes blame.',Research:'Mapped three misattribution modes and tore down six platforms.',Insight:'Telemetry contamination - the UI was decoupled without decoupling attribution.',Solution:'An adjudication engine triangulating user tags against GPS/timestamp telemetry.',Impact:'Accurate fault attribution plus a zero-CAC Hyperpure B2B lead loop.',Learnings:'Reframe the metric before you redesign the screen.'}},
+    {name:'Coastal Eye',world:'AI & Civic Tech World',c:'#3FB7E6',x:'34%',y:'66%',mx:'56%',my:'69%',sz:104,d:'9s',det:{Problem:'Coastal hazards move faster than official channels can react.',Research:'Mapped the citizen-reporter journey; prioritized real-time alerts.',Insight:'Crowdsourced reports are noisy - trust is the real bottleneck.',Solution:'Geo-tagged reporting fused with AI credibility scoring and a live hotspot map.',Impact:'Timely, coordinated crisis response between communities and responders.',Learnings:"AI's job here is trust, not prediction."}},
+    {name:'Ideal Fitness',world:'AI Automation World',c:'#E8A24B',x:'50%',y:'46%',mx:'6%',my:'78%',sz:92,d:'6.6s',det:{Problem:'Producing on-brand fitness content by hand does not scale.',Research:'Audited the content pipeline end to end.',Insight:'The bottleneck is orchestration, not creativity.',Solution:'An n8n pipeline chaining Claude → ElevenLabs → HeyGen from script to video.',Impact:'Automated avatar video from script to publish, multi-platform.',Learnings:'Automation compounds when you own the whole chain.'}}
   ];
-  (function(){ const f=jq('#j6field'); PLANETS.forEach((p,i)=>{ const el=document.createElement('div'); el.className='planet';
-    el.style.left=p.x; el.style.top=p.y; el.style.setProperty('--c',p.c); el.style.setProperty('--sz',p.sz+'px'); el.style.setProperty('--d',p.d); el.style.animationDelay=(-i*1.3)+'s';
+  (function(){ const f=jq('#j6field'), nar=matchMedia('(max-width:600px)').matches; PLANETS.forEach((p,i)=>{ const el=document.createElement('div'); el.className='planet';
+    el.style.left=nar?p.mx:p.x; el.style.top=nar?p.my:p.y; el.style.setProperty('--c',p.c); el.style.setProperty('--sz',(nar?Math.round(p.sz*.56):p.sz)+'px'); el.style.setProperty('--d',p.d); el.style.animationDelay=(-i*1.3)+'s';
     el.innerHTML='<div class="ball"></div><div class="plabel">'+p.name+'</div><div class="pworld">'+p.world+'</div>';
     el.addEventListener('click',()=>openPlanet(i)); f.appendChild(el); }); })();
   function openPlanet(i){ const p=PLANETS[i], c=jq('#j6card'); c.style.setProperty('--c',p.c);
